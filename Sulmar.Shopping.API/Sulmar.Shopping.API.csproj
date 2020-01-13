@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sulmar.Shopping.Domain\Sulmar.Shopping.Domain.csproj" />
+    <ProjectReference Include="..\Sulmar.Shopping.Infrastructure\Sulmar.Shopping.Infrastructure.csproj" />
+  </ItemGroup>
+
+
+</Project>

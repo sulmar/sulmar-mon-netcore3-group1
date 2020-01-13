@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.Domain", "Sulmar.Shopping.Domain\Sulmar.Shopping.Domain.csproj", "{5FDFFCEF-0E1C-49B5-8609-3440CEDE6CFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.Infrastructure", "Sulmar.Shopping.Infrastructure\Sulmar.Shopping.Infrastructure.csproj", "{4715AD8E-5B59-4EA0-9949-7772CDB9C123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.API", "Sulmar.Shopping.API\Sulmar.Shopping.API.csproj", "{05E09674-1E11-47B5-973B-942C25162981}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{5FDFFCEF-0E1C-49B5-8609-3440CEDE6CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FDFFCEF-0E1C-49B5-8609-3440CEDE6CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FDFFCEF-0E1C-49B5-8609-3440CEDE6CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4715AD8E-5B59-4EA0-9949-7772CDB9C123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4715AD8E-5B59-4EA0-9949-7772CDB9C123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4715AD8E-5B59-4EA0-9949-7772CDB9C123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4715AD8E-5B59-4EA0-9949-7772CDB9C123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E09674-1E11-47B5-973B-942C25162981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E09674-1E11-47B5-973B-942C25162981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E09674-1E11-47B5-973B-942C25162981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E09674-1E11-47B5-973B-942C25162981}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
