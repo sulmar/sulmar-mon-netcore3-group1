@@ -1,4 +1,5 @@
 ﻿using Sulmar.Shopping.Domain;
+using Sulmar.Shopping.Domain.SearchCriterias;
 using Sulmar.Shopping.Domain.Services;
 using Sulmar.Shopping.Infrastructure.Fakers;
 using System;
@@ -29,6 +30,35 @@ namespace Sulmar.Shopping.Infrastructure
         public Customer Get(int id)
         {
             return customers.SingleOrDefault(c => c.Id == id);
+        }
+
+        public Customer Get(string pesel)
+        {
+            return customers.SingleOrDefault(c => c.Pesel == pesel);
+        }
+
+        public IEnumerable<Customer> Get(CustomerSearchCriteria criteria)
+        {
+            IQueryable<Customer> query = customers.AsQueryable();
+
+            if (!string.IsNullOrEmpty(criteria.FirstName))
+            {
+                query = query.Where(c => c.FirstName == criteria.FirstName);
+            }
+
+            if (!string.IsNullOrEmpty(criteria.LastName))
+            {
+                query = query.Where(c => c.LastName == criteria.LastName);
+            }
+
+            if (criteria.IsRemoved.HasValue)
+            {
+                query = query.Where(c => c.IsRemoved == criteria.IsRemoved);
+            }
+
+         //   query = query.OrderBy(c=>c.Id).Skip(20).Take()
+
+           return query.ToList();
         }
 
         public void Remove(int id)
