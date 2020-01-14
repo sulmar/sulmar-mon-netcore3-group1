@@ -30,9 +30,7 @@ namespace Sulmar.Shopping.RawAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            // OWIN: dotnet add package Microsoft.AspNetCore.Owin
-
-            // http://owin.org/html/spec/owin-1.0.1.html#3-1-application-delegate
+            // dotnet add package Microsoft.AspNetCore.Owin
             app.UseOwin(pipeline => pipeline(environment => OwinHandler));
 
             app.Use(async (context, next) =>
@@ -83,6 +81,9 @@ namespace Sulmar.Shopping.RawAPI
             //});
         }
 
+
+        // OWIN = Open Web Server Interface for .NET
+        // http://owin.org/html/spec/owin-1.0.1.html
         private async Task OwinHandler(IDictionary<string, object> environment)
         {
             string requestMethod = (string) environment["owin.RequestMethod"];
