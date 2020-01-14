@@ -18,10 +18,22 @@ namespace Sulmar.Shopping.API
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
+
+        //public Startup(IHostEnvironment env)
+        //{
+        //    var builder = new ConfigurationBuilder()
+        //        .SetBasePath(env.ContentRootPath)
+        //        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+        //        .AddXmlFile("appsettings.xml", optional: true, reloadOnChange: true)
+        //        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange:true);
+
+        //    Configuration = builder.Build();
+        //}
 
         public IConfiguration Configuration { get; }
 
@@ -32,17 +44,30 @@ namespace Sulmar.Shopping.API
             services.AddScoped<ICustomerRepository, FakeCustomerRepository>();
             services.AddScoped<CustomerFaker>();
 
+
+            // IOptions<T>
+            services.Configure<FakeCustomerRepositoryOptions>(Configuration.GetSection("FakeCustomerRepositoryOptions"));
+
+            // surowe
+            //var customersOptions = new FakeCustomerRepositoryOptions();
+            //Configuration.GetSection("FakeCustomerRepositoryOptions").Bind(customersOptions);
+            //services.AddSingleton(customersOptions);
+
             services.AddControllers();
         }
 
-        public void ConfigureTesting(IApplicationBuilder app, IWebHostEnvironment env)
-        {
+        //public void ConfigureTesting(IApplicationBuilder app, IWebHostEnvironment env)
+        //{
 
-        }
+        //}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            int customersQty = int.Parse(Configuration["Shopping:CustomersQty"]);
+
+            string connectionString = Configuration.GetConnectionString("ShoppingConnection");
+
             if (env.EnvironmentName == "Testing")
             {
 
@@ -55,9 +80,13 @@ namespace Sulmar.Shopping.API
 
             app.UseHttpsRedirection();
 
+        
+
             app.UseRouting();
 
             app.UseAuthorization();
+
+            // app.UseMvc();
 
             app.UseEndpoints(endpoints =>
             {

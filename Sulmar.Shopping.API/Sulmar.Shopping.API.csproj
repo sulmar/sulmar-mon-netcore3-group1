@@ -5,8 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="appsettings.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Sulmar.Shopping.Domain\Sulmar.Shopping.Domain.csproj" />
     <ProjectReference Include="..\Sulmar.Shopping.Infrastructure\Sulmar.Shopping.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 

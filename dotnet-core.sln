@@ -9,6 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.Infrastruct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.API", "Sulmar.Shopping.API\Sulmar.Shopping.API.csproj", "{05E09674-1E11-47B5-973B-942C25162981}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.RawAPI", "Sulmar.Shopping.RawAPI\Sulmar.Shopping.RawAPI.csproj", "{F022B852-1E8D-4965-9356-1A07063AD7D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.SignalR", "Sulmar.Shopping.SignalR\Sulmar.Shopping.SignalR.csproj", "{BDEA146D-8E30-47E0-A47B-CFBB2662177D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.SenderClient", "Sulmar.Shopping.SenderClient\Sulmar.Shopping.SenderClient.csproj", "{2828EB69-EF75-4851-A7EE-E25973358273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.ReceiverClient", "Sulmar.Shopping.ReceiverClient\Sulmar.Shopping.ReceiverClient.csproj", "{3A256EBA-0539-48D0-957F-8FFBC33D77B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +35,22 @@ Global
 		{05E09674-1E11-47B5-973B-942C25162981}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05E09674-1E11-47B5-973B-942C25162981}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05E09674-1E11-47B5-973B-942C25162981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F022B852-1E8D-4965-9356-1A07063AD7D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F022B852-1E8D-4965-9356-1A07063AD7D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F022B852-1E8D-4965-9356-1A07063AD7D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F022B852-1E8D-4965-9356-1A07063AD7D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDEA146D-8E30-47E0-A47B-CFBB2662177D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDEA146D-8E30-47E0-A47B-CFBB2662177D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDEA146D-8E30-47E0-A47B-CFBB2662177D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDEA146D-8E30-47E0-A47B-CFBB2662177D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2828EB69-EF75-4851-A7EE-E25973358273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2828EB69-EF75-4851-A7EE-E25973358273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2828EB69-EF75-4851-A7EE-E25973358273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2828EB69-EF75-4851-A7EE-E25973358273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A256EBA-0539-48D0-957F-8FFBC33D77B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A256EBA-0539-48D0-957F-8FFBC33D77B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A256EBA-0539-48D0-957F-8FFBC33D77B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A256EBA-0539-48D0-957F-8FFBC33D77B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

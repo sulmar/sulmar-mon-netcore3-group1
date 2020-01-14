@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Sulmar.Shopping.API
+namespace Sulmar.Shopping.SignalR
 {
     public class Program
     {
@@ -18,12 +18,6 @@ namespace Sulmar.Shopping.API
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureAppConfiguration((hostingContext, config)=>
-                {
-                    config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-                    config.AddXmlFile("appsettings.xml", optional: true, reloadOnChange: true);
-                    config.AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", optional: true, reloadOnChange: true);
-                }) 
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

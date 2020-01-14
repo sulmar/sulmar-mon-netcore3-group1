@@ -1,20 +1,35 @@
-﻿using Sulmar.Shopping.Domain;
+﻿using Microsoft.Extensions.Options;
+using Sulmar.Shopping.Domain;
 using Sulmar.Shopping.Domain.SearchCriterias;
 using Sulmar.Shopping.Domain.Services;
 using Sulmar.Shopping.Infrastructure.Fakers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace Sulmar.Shopping.Infrastructure
 {
+    public class FakeCustomerRepositoryOptions
+    {
+        public int Quantity { get; set; }
+    }
+
     public class FakeCustomerRepository : ICustomerRepository
     {
         private readonly ICollection<Customer> customers;
 
-        public FakeCustomerRepository(CustomerFaker customerFaker)
+        private readonly FakeCustomerRepositoryOptions options;
+
+        // dotnet add package Microsoft.Extensions.Option
+        public FakeCustomerRepository(
+            CustomerFaker customerFaker,
+            IOptionsSnapshot<FakeCustomerRepositoryOptions> options)
         {
-            customers = customerFaker.Generate(100);
+
+            this.options = options.Value;
+
+            customers = customerFaker.Generate(this.options.Quantity);
         }
 
         public void Add(Customer entity)

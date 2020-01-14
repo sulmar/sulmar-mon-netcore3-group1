@@ -1,0 +1,10 @@
+﻿<Configuration>
+  <Shopping>
+    <CustomersQty>10</CustomersQty>
+  </Shopping>
+
+  <FakeCustomerRepositoryOptions>
+    <Quantity>70</Quantity>
+  </FakeCustomerRepositoryOptions>
+  
+</Configuration>
