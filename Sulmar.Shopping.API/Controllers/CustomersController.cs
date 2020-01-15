@@ -90,6 +90,9 @@ namespace Sulmar.Shopping.API.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Customer customer)
         {
+            if (!this.ModelState.IsValid)
+                return BadRequest(ModelState);
+
             customerRepository.Add(customer);
 
             // zla praktyka

@@ -1,14 +1,11 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using Sulmar.Shopping.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Sulmar.Shopping.Domain.Services;
 using System.Threading.Tasks;
 
 namespace Sulmar.Shopping.SignalR.Hubs
 {
-
-    public class ChatterHub : Hub
+    public class StrongChatterHub : Hub<IChatter>
     {
         public override async Task OnConnectedAsync()
         {
@@ -24,18 +21,13 @@ namespace Sulmar.Shopping.SignalR.Hubs
 
         public async Task SendMessage(ChatMessage message, string roomId)
         {
-            // await this.Clients.All.SendAsync("HaveGotMessage", message);
+            //await this.Clients.All.HaveGotMessage(message);
 
-            //await this.Clients.Others.SendAsync("HaveGotMessage", message);
+            //await this.Clients.Others.HaveGotMessage(message);
 
-            await this.Clients.Group(roomId).SendAsync("HaveGotMessage", message);
+            await this.Clients.Group(roomId).HaveGotMessage(message);
 
-           
-        }
 
-        public async Task Ping(string message = "Pong")
-        {
-            await this.Clients.Caller.SendAsync(message);
         }
     }
 }

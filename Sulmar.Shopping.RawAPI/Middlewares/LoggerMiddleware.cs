@@ -8,6 +8,19 @@ using System.Threading.Tasks;
 
 namespace Sulmar.Shopping.RawAPI.Middlewares
 {
+    public interface IFoo
+    {
+        string Get();
+    }
+
+    public class Foo : IFoo
+    {
+        public string Get()
+        {
+            return "Hello World!";
+        }
+    }
+
     public class LoggerMiddleware
     {
         private readonly RequestDelegate next;

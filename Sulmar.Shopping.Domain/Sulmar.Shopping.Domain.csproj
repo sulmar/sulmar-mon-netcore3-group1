@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <NeutralLanguage></NeutralLanguage>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.6.1" />
+  </ItemGroup>
 
 </Project>

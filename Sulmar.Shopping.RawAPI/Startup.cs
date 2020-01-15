@@ -20,6 +20,7 @@ namespace Sulmar.Shopping.RawAPI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IFoo, Foo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -29,6 +30,8 @@ namespace Sulmar.Shopping.RawAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseMiddleware<MyMiddleware>();
 
             // dotnet add package Microsoft.AspNetCore.Owin
             app.UseOwin(pipeline => pipeline(environment => OwinHandler));

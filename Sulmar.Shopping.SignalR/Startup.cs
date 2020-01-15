@@ -32,7 +32,7 @@ namespace Sulmar.Shopping.SignalR
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapHub<ChatterHub>("/signalr/chatter");
+                endpoints.MapHub<StrongChatterHub>("/signalr/chatter");
 
                 endpoints.MapGet("/", async context =>
                 {

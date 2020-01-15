@@ -17,6 +17,9 @@ namespace Sulmar.Shopping.Infrastructure.Fakers
             RuleFor(p => p.LastName, f => f.Person.LastName);
             //Ignore(p > => p.Pesel);
             RuleFor(p => p.Pesel, f => f.Random.String2(11, "0123456789"));
+            RuleFor(p => p.City, f => f.Person.Address.City);
+            RuleFor(p => p.PostCode, f => f.Person.Address.ZipCode);
+            RuleFor(p => p.Email, (f, customer) => $"{customer.FirstName}.{customer.LastName}@mon.gov.pl");
             RuleFor(p => p.IsRemoved, f => f.Random.Bool(0.2f));
         }
     }

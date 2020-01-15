@@ -10,6 +10,10 @@ namespace Sulmar.Shopping.Domain
         public string LastName { get; set; }
         public string Pesel { get; set; }
         public bool IsRemoved { get; set; }
+        public string PostCode { get; set; }
+
+        public string Email { get; set; }
+        public string City { get; set; }
 
     }
 }
