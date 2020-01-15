@@ -10,11 +10,17 @@ namespace Sulmar.Shopping.SignalR.Hubs
 
     public class ChatterHub : Hub
     {
+
         public override async Task OnConnectedAsync()
         {
             await this.Groups.AddToGroupAsync(this.Context.ConnectionId, "MON");
 
             base.OnConnectedAsync();
+        }
+
+        public override Task OnDisconnectedAsync(Exception exception)
+        {
+            return base.OnDisconnectedAsync(exception);
         }
 
         public async Task JoinRoom(string roomId)

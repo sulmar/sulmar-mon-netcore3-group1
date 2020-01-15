@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
 using Sulmar.Shopping.Domain.Models;
 using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace Sulmar.Shopping.SenderClient
@@ -30,15 +31,31 @@ namespace Sulmar.Shopping.SenderClient
 
             Console.WriteLine("Connected.");
 
-            while(true)
-            {
-                Console.Write("Type message: ");
-                string content = Console.ReadLine();
+            //while(true)
+            //{
+            //    Console.Write("Type message: ");
+            //    string content = Console.ReadLine();
 
-                ChatMessage message = new ChatMessage { Content = content };
+            //    ChatMessage message = new ChatMessage { Content = content };
+
+            //    await connection.SendAsync("SendMessage", message, "Klon");
+            //}
+
+            Stopwatch stopwatch = new Stopwatch();
+
+            stopwatch.Start();
+
+            for (int i = 0; i < 10000; i++)
+            {
+                ChatMessage message = new ChatMessage { Content = $"Temp {i}" };
 
                 await connection.SendAsync("SendMessage", message, "Klon");
             }
+
+            stopwatch.Stop();
+            Console.WriteLine($"elapsed time: {stopwatch.Elapsed}");
+
+            Console.ReadKey();
 
             Console.ResetColor();
         }

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option csharp_namespace = "Shopping.PaymentService";
+
+package Payment;
+
+service PaymentManager {
+	rpc MakePayment (MakePaymentRequest) returns (MakePaymentResponse);
+	rpc GetPaymentStatus (GetPaymentStatusRequest) returns (stream GetPaymentStatusResponse);
+}
+
+message MakePaymentRequest {
+	string productId = 1;
+	int32 quantity = 2;
+	string address = 3;
+}
+
+message MakePaymentResponse {
+	string orderId = 1;
+}
+
+message GetPaymentStatusRequest {
+	string orderId = 1;
+}
+
+message GetPaymentStatusResponse {
+	string status = 1;
+}

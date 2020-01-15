@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option csharp_namespace = "Sulmar.Shopping.ChatterService";
+
+package chatter;
+
+service ChatterManager {
+	rpc JoinRoom (JoinRoomRequest) returns (JoinRoomResponse);
+	rpc SendMessage (stream ChatMessage) returns (stream ChatMessage);
+}
+
+message JoinRoomRequest {
+	string room_id = 1;
+}
+
+message JoinRoomResponse {
+
+}
+
+message ChatMessage {
+	string content = 1;
+	bool is_high_priority = 2;
+	string room_id = 3;
+}
+
+
+
+
+
