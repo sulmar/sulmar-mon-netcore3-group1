@@ -11,9 +11,18 @@ namespace Sulmar.Shopping.Domain
         public string Pesel { get; set; }
         public bool IsRemoved { get; set; }
         public string PostCode { get; set; }
-
+        public string Login { get; set; }
+        public string HashPassword { get; set; }
         public string Email { get; set; }
         public string City { get; set; }
+        public byte[] Version { get; set; }
+        public Gender Gender { get; set; }
 
+    }
+
+    public enum Gender
+    {
+        Man,
+        Female
     }
 }

@@ -15,7 +15,20 @@ namespace Shopping.ConsoleClient
     {
         static async Task Main(string[] args)
         {
-            await StreamClientTest();
+            float x = 10;
+            float y = 0;
+
+            float result = x / y;
+
+            checked
+            {
+                byte z = 255;
+
+                z++;
+                z++;
+            }
+
+      //      await StreamClientTest();
 
             //FileSystemWatcherTest();
 

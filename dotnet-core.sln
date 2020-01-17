@@ -3,29 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.Domain", "Sulmar.Shopping.Domain\Sulmar.Shopping.Domain.csproj", "{5FDFFCEF-0E1C-49B5-8609-3440CEDE6CFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.Shopping.Domain", "Sulmar.Shopping.Domain\Sulmar.Shopping.Domain.csproj", "{5FDFFCEF-0E1C-49B5-8609-3440CEDE6CFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.Infrastructure", "Sulmar.Shopping.Infrastructure\Sulmar.Shopping.Infrastructure.csproj", "{4715AD8E-5B59-4EA0-9949-7772CDB9C123}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.Shopping.Infrastructure", "Sulmar.Shopping.Infrastructure\Sulmar.Shopping.Infrastructure.csproj", "{4715AD8E-5B59-4EA0-9949-7772CDB9C123}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.API", "Sulmar.Shopping.API\Sulmar.Shopping.API.csproj", "{05E09674-1E11-47B5-973B-942C25162981}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.Shopping.API", "Sulmar.Shopping.API\Sulmar.Shopping.API.csproj", "{05E09674-1E11-47B5-973B-942C25162981}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.RawAPI", "Sulmar.Shopping.RawAPI\Sulmar.Shopping.RawAPI.csproj", "{F022B852-1E8D-4965-9356-1A07063AD7D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.Shopping.RawAPI", "Sulmar.Shopping.RawAPI\Sulmar.Shopping.RawAPI.csproj", "{F022B852-1E8D-4965-9356-1A07063AD7D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.SignalR", "Sulmar.Shopping.SignalR\Sulmar.Shopping.SignalR.csproj", "{BDEA146D-8E30-47E0-A47B-CFBB2662177D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.Shopping.SignalR", "Sulmar.Shopping.SignalR\Sulmar.Shopping.SignalR.csproj", "{BDEA146D-8E30-47E0-A47B-CFBB2662177D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.SenderClient", "Sulmar.Shopping.SenderClient\Sulmar.Shopping.SenderClient.csproj", "{2828EB69-EF75-4851-A7EE-E25973358273}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.Shopping.SenderClient", "Sulmar.Shopping.SenderClient\Sulmar.Shopping.SenderClient.csproj", "{2828EB69-EF75-4851-A7EE-E25973358273}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.ReceiverClient", "Sulmar.Shopping.ReceiverClient\Sulmar.Shopping.ReceiverClient.csproj", "{3A256EBA-0539-48D0-957F-8FFBC33D77B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.Shopping.ReceiverClient", "Sulmar.Shopping.ReceiverClient\Sulmar.Shopping.ReceiverClient.csproj", "{3A256EBA-0539-48D0-957F-8FFBC33D77B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.PaymentService", "Shopping.PaymentService\Shopping.PaymentService.csproj", "{48C1C836-DAFF-40E5-B68E-1B2ACCD5FFCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping.PaymentService", "Shopping.PaymentService\Shopping.PaymentService.csproj", "{48C1C836-DAFF-40E5-B68E-1B2ACCD5FFCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.ConsoleClient", "Shopping.ConsoleClient\Shopping.ConsoleClient.csproj", "{8A4C57E7-68FF-4BFE-9490-BE8D9F8FB986}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping.ConsoleClient", "Shopping.ConsoleClient\Shopping.ConsoleClient.csproj", "{8A4C57E7-68FF-4BFE-9490-BE8D9F8FB986}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.ChatterService", "Sulmar.Shopping.ChatterService\Sulmar.Shopping.ChatterService.csproj", "{B233A33A-3A90-4D32-BDFC-FCAD9ABF9125}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.Shopping.ChatterService", "Sulmar.Shopping.ChatterService\Sulmar.Shopping.ChatterService.csproj", "{B233A33A-3A90-4D32-BDFC-FCAD9ABF9125}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.GrpcSenderClient", "Sulmar.Shopping.GrpcSenderClient\Sulmar.Shopping.GrpcSenderClient.csproj", "{BBD3A53E-116D-4806-899C-494459A69C8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.Shopping.GrpcSenderClient", "Sulmar.Shopping.GrpcSenderClient\Sulmar.Shopping.GrpcSenderClient.csproj", "{BBD3A53E-116D-4806-899C-494459A69C8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.GrpcReceiverClient", "Sulmar.Shopping.GrpcReceiverClient\Sulmar.Shopping.GrpcReceiverClient.csproj", "{738FDEC2-D870-4C07-9B17-A9636F0E73A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sulmar.Shopping.GrpcReceiverClient", "Sulmar.Shopping.GrpcReceiverClient\Sulmar.Shopping.GrpcReceiverClient.csproj", "{738FDEC2-D870-4C07-9B17-A9636F0E73A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.UnitTests", "Sulmar.Shopping.UnitTests\Sulmar.Shopping.UnitTests.csproj", "{8E54798A-69C0-421F-98CD-15540BE03B22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sulmar.Shopping.IntegrationTests", "Sulmar.Shopping.IntegrationTests\Sulmar.Shopping.IntegrationTests.csproj", "{3CF992C1-9267-4579-A17C-33416E87284C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,14 @@ Global
 		{738FDEC2-D870-4C07-9B17-A9636F0E73A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{738FDEC2-D870-4C07-9B17-A9636F0E73A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{738FDEC2-D870-4C07-9B17-A9636F0E73A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E54798A-69C0-421F-98CD-15540BE03B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E54798A-69C0-421F-98CD-15540BE03B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E54798A-69C0-421F-98CD-15540BE03B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E54798A-69C0-421F-98CD-15540BE03B22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF992C1-9267-4579-A17C-33416E87284C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF992C1-9267-4579-A17C-33416E87284C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF992C1-9267-4579-A17C-33416E87284C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF992C1-9267-4579-A17C-33416E87284C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,13 +10,15 @@ namespace Sulmar.Shopping.ChatterService.Services
 {
     public class ChatterService : ChatterManager.ChatterManagerBase
     {
-        private static readonly IDictionary<string, string> rooms = new Dictionary<string, string>();
+        private static readonly IDictionary<IAsyncStreamWriter<ChatMessage>, string> rooms 
+            = new Dictionary<IAsyncStreamWriter<ChatMessage>, string>();
 
-        public override async Task<JoinRoomResponse> JoinRoom(JoinRoomRequest request, ServerCallContext context)
+        public override async Task<JoinRoomResponse> JoinRoom(JoinRoomRequest request, 
+            ServerCallContext context)
         {
             string connectionId = context.GetHttpContext().Connection.Id;
 
-            rooms[connectionId] = request.RoomId;
+         //   rooms[context.] = request.RoomId;
 
             return new JoinRoomResponse();
         }
@@ -25,9 +27,17 @@ namespace Sulmar.Shopping.ChatterService.Services
             IAsyncStreamReader<ChatMessage> requestStream, 
             IServerStreamWriter<ChatMessage> responseStream, ServerCallContext context)
         {
+            string connectionId = context.GetHttpContext().Connection.Id;
+
+            rooms[responseStream] = connectionId;
+
             await foreach(var request in requestStream.ReadAllAsync(context.CancellationToken))
             {
-                await responseStream.WriteAsync(new ChatMessage { Content = request.Content });
+                foreach (var room in rooms)
+                {
+                    await room.Key.WriteAsync(new ChatMessage { Content = request.Content });
+                }
+                
             }
 
             //while (await requestStream.MoveNext(context.CancellationToken))
